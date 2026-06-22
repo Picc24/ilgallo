@@ -94,4 +94,85 @@ export const Contact: React.FC = () => {
         .contact-card a {
           color: var(--gold);
           font-weight: 500;
-          text-decoration
+          text-decoration: none;
+        }
+        .contact-card a:hover {
+          text-decoration: underline;
+        }
+        .contact-card .phone-link {
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+        .contact-hours {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+        .contact-hours .day {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.95rem;
+          padding: 6px 0;
+          border-bottom: 1px solid var(--sand);
+        }
+        .contact-hours .day span:last-child {
+          opacity: 0.7;
+          font-weight: 300;
+        }
+        .contact-cta-box {
+          margin-top: 50px;
+          padding: 48px 40px;
+          background: var(--dark);
+          border-radius: var(--radius);
+          text-align: center;
+          color: var(--white);
+          box-shadow: var(--shadow);
+        }
+        .contact-cta-box h3 {
+          color: var(--white);
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          font-family: var(--font-serif);
+        }
+        .contact-cta-box p {
+          opacity: 0.7;
+          font-weight: 300;
+          font-size: 1.05rem;
+          margin-bottom: 1.8rem;
+        }
+        .contact-cta-box .cta-btn {
+          background: var(--white);
+          color: var(--dark);
+          font-size: 1.1rem;
+          padding: 16px 44px;
+        }
+        .contact-cta-box .cta-btn:hover {
+          background: var(--gold-pale);
+        }
+        .contact-cta-box .cta-note {
+          font-size: 0.8rem;
+          margin-top: 1.2rem;
+          opacity: 0.5;
+        }
+        @media (max-width: 1024px) {
+          .contact-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        @media (max-width: 768px) {
+          .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+          .contact-cta-box {
+            padding: 32px 20px;
+          }
+          .contact-cta-box h3 {
+            font-size: 1.6rem;
+          }
+        }
+      `}</style>
+    </section>
+  );
+};
