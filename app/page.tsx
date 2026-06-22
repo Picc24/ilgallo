@@ -70,27 +70,25 @@ export default function Home() {
             padding: 60px 80px 60px 60px;
             overflow-y: auto;
             max-height: 100vh;
-            background-image: 
-              repeating-linear-gradient(45deg, rgba(201,123,90,0.03) 0px, rgba(201,123,90,0.03) 2px, transparent 2px, transparent 8px);
           }
 
-          /* ====== HERO ====== */
+          /* ====== HERO - CHIARA E LEGGIBILE ====== */
           .hero {
             margin-bottom: 80px;
-            padding: 60px 40px;
-            background: linear-gradient(135deg, #2e2b26 0%, #3d3832 100%);
-            color: #fcf8f2;
+            padding: 50px 40px;
+            background: #fcf8f2;
             border-radius: 8px;
+            border: 1px solid #e8e0d6;
             position: relative;
             overflow: hidden;
           }
-          .hero::after {
+          .hero::before {
             content: '🍷';
             position: absolute;
             right: 30px;
             bottom: 20px;
-            font-size: 6rem;
-            opacity: 0.1;
+            font-size: 8rem;
+            opacity: 0.06;
           }
           .hero .tag {
             font-size: 0.6rem;
@@ -103,11 +101,12 @@ export default function Home() {
             font-weight: 300;
             letter-spacing: -1px;
             margin: 8px 0 16px;
+            color: #2e2b26;
           }
           .hero h2 em { font-style: italic; color: #c97b5a; }
           .hero p {
             font-size: 1rem;
-            color: #b5a89a;
+            color: #5a4f44;
             max-width: 400px;
           }
           .hero .btn-group {
@@ -125,16 +124,16 @@ export default function Home() {
             transition: 0.3s;
             cursor: pointer;
             background: transparent;
-            color: #fcf8f2;
+            color: #2e2b26;
             border-radius: 4px;
           }
           .btn:hover {
             background: #c97b5a;
-            color: #2e2b26;
+            color: #fcf8f2;
           }
           .btn-primary {
             background: #c97b5a;
-            color: #2e2b26;
+            color: #fcf8f2;
             border-color: #c97b5a;
           }
           .btn-primary:hover {
@@ -146,7 +145,7 @@ export default function Home() {
           .section {
             margin-bottom: 80px;
             padding-bottom: 60px;
-            border-bottom: 2px dashed #d6c9b7;
+            border-bottom: 2px dashed #e8e0d6;
           }
           .section:last-child { border-bottom: none; margin-bottom: 0; }
 
@@ -161,7 +160,6 @@ export default function Home() {
             font-size: 0.85rem;
             color: #8a7a6a;
             margin-bottom: 32px;
-            font-style: italic;
           }
           .section .sub::before {
             content: '✦ ';
@@ -176,19 +174,15 @@ export default function Home() {
             align-items: center;
           }
           .about-grid .img {
-            background: #d6c9b7;
             height: 260px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #8a7a6a;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
+            font-size: 4rem;
             border-radius: 8px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%23d6c9b7"/><text x="50" y="55" font-family="Arial" font-size="12" fill="%238a7a6a" text-anchor="middle">🍽️</text></svg>');
-            background-size: 60px;
-            background-repeat: no-repeat;
-            background-position: center;
+            background: #e8e0d6;
+            background-image: 
+              repeating-linear-gradient(45deg, #d6c9b7 0px, #d6c9b7 2px, transparent 2px, transparent 8px);
           }
           .about-grid p {
             font-size: 0.95rem;
@@ -205,7 +199,7 @@ export default function Home() {
             padding-left: 16px;
           }
 
-          /* ====== VINI ====== */
+          /* ====== VINI - CON IMMAGINI ====== */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -213,25 +207,22 @@ export default function Home() {
           }
           .wine-card {
             background: #fcf8f2;
-            padding: 0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            transition: 0.3s;
             border: 1px solid #e8e0d6;
+            transition: 0.3s;
           }
-          .wine-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+          .wine-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
           .wine-card .img-wine {
-            height: 140px;
-            background: #e8e0d6;
+            height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 4rem;
           }
-          .wine-card .img-wine.r { background: #e8d6c9; }
-          .wine-card .img-wine.b { background: #d6e0d6; }
-          .wine-card .img-wine.s { background: #d6d6e0; }
+          .wine-card .img-wine.r { background: #f0e4d6; }
+          .wine-card .img-wine.b { background: #e4f0e4; }
+          .wine-card .img-wine.s { background: #e4e4f0; }
           .wine-card .info {
             padding: 16px 20px 20px;
           }
@@ -249,7 +240,7 @@ export default function Home() {
           .wine-card .price-tag {
             display: inline-block;
             margin-top: 8px;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #c97b5a;
             letter-spacing: 1px;
             border: 1px solid #c97b5a;
@@ -279,10 +270,7 @@ export default function Home() {
             padding: 8px 0;
             border-bottom: 1px solid #f0ece6;
           }
-          .menu-item .price {
-            color: #c97b5a;
-            font-weight: 400;
-          }
+          .menu-item .price { color: #c97b5a; }
           .menu-item .desc {
             display: block;
             font-size: 0.65rem;
@@ -301,13 +289,13 @@ export default function Home() {
             padding: 24px;
             border-radius: 8px;
             border-left: 4px solid #c97b5a;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #e8e0d6;
+            border-left-width: 4px;
           }
           .review-card .stars {
             font-size: 1rem;
             color: #c97b5a;
             margin-bottom: 4px;
-            letter-spacing: 2px;
           }
           .review-card p {
             font-size: 0.85rem;
@@ -318,11 +306,6 @@ export default function Home() {
             font-size: 0.7rem;
             color: #8a7a6a;
             margin-top: 8px;
-            font-style: normal;
-          }
-          .review-card .author::before {
-            content: '— ';
-            color: #c97b5a;
           }
 
           /* ====== CONTATTI ====== */
@@ -332,18 +315,15 @@ export default function Home() {
             gap: 40px;
           }
           .contact-grid .map {
-            background: #e8e0d6;
             height: 240px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #8a7a6a;
-            font-size: 0.7rem;
+            font-size: 3rem;
             border-radius: 8px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%23e8e0d6"/><text x="50" y="55" font-family="Arial" font-size="12" fill="%238a7a6a" text-anchor="middle">📍</text></svg>');
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-position: center;
+            background: #e8e0d6;
+            background-image: 
+              repeating-linear-gradient(45deg, #d6c9b7 0px, #d6c9b7 2px, transparent 2px, transparent 8px);
           }
           .contact-info p {
             font-size: 0.9rem;
@@ -360,6 +340,7 @@ export default function Home() {
             background: #fcf8f2;
             padding: 16px;
             border-radius: 8px;
+            border: 1px solid #e8e0d6;
           }
           .hours .row {
             display: flex;
@@ -392,7 +373,7 @@ export default function Home() {
             .review-grid { grid-template-columns: 1fr 1fr; }
           }
           @media (max-width: 768px) {
-            .hero { padding: 40px 24px; }
+            .hero { padding: 30px 20px; }
             .hero h2 { font-size: 2.4rem; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -436,7 +417,7 @@ export default function Home() {
               </div>
             </section>
 
-            {/* VINI - con immagini e prezzi finti */}
+            {/* VINI */}
             <section className="section" id="vini">
               <h3>La cantina</h3>
               <p className="sub">Etichette selezionate dai nostri sommelier</p>
@@ -473,7 +454,7 @@ export default function Home() {
               <h3>L'osteria</h3>
               <p className="sub">Tradizione e ospitalità dal 2014</p>
               <div className="about-grid">
-                <div className="img"></div>
+                <div className="img">🏛️</div>
                 <div>
                   <p>L'Osteria Il Gallo è nata nel 2014 dalla passione per la cucina italiana e l'ospitalità. Ogni piatto racconta una storia di famiglia e tradizione.</p>
                   <p>Dalla fiorentina alla brace alla pasta fresca fatta in casa, tutto è preparato con ingredienti selezionati.</p>
@@ -541,7 +522,7 @@ export default function Home() {
               <h3>Dove siamo</h3>
               <p className="sub">Vieni a trovarci a Stradella</p>
               <div className="contact-grid">
-                <div className="map"></div>
+                <div className="map">📍</div>
                 <div className="contact-info">
                   <p>Via Parea, 3 · Stradella (PV)</p>
                   <p><a href="https://www.google.com/maps?q=Via+Parea+3+Stradella">Apri su Google Maps →</a></p>
