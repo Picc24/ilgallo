@@ -14,14 +14,13 @@ export default function Home() {
             line-height: 1.6;
           }
 
-          /* ====== LAYOUT ====== */
           .site {
             display: grid;
             grid-template-columns: 200px 1fr;
             min-height: 100vh;
           }
 
-          /* ====== SIDEBAR ====== */
+          /* SIDEBAR */
           .sidebar {
             background: #2e2b26;
             padding: 40px 20px;
@@ -64,46 +63,42 @@ export default function Home() {
             letter-spacing: 1px;
           }
 
-          /* ====== MAIN ====== */
+          /* MAIN */
           .main {
             padding: 60px 80px 60px 60px;
             overflow-y: auto;
             max-height: 100vh;
           }
 
-          /* ====== HERO ====== */
+          /* HERO CON SFONDO */
           .hero {
             margin-bottom: 80px;
             padding: 60px 50px;
-            background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d6 100%);
-            border-radius: 12px;
+            border-radius: 16px;
             position: relative;
             overflow: hidden;
             min-height: 320px;
             display: flex;
             align-items: center;
+            background: linear-gradient(135deg, #2e2b26 0%, #4a3f38 100%);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
           }
-          .hero-bg {
+          .hero-image-bg {
             position: absolute;
-            right: -40px;
-            bottom: -40px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(176,128,74,0.08) 0%, transparent 70%);
-            border-radius: 50%;
-          }
-          .hero-bg2 {
-            position: absolute;
-            left: -20px;
-            top: -20px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(176,128,74,0.05) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            border-radius: 0 16px 16px 0;
           }
           .hero-content {
             position: relative;
             z-index: 2;
+            max-width: 60%;
           }
           .hero .tag {
             font-size: 0.6rem;
@@ -116,12 +111,12 @@ export default function Home() {
             font-weight: 300;
             letter-spacing: -1px;
             margin: 8px 0 16px;
-            color: #2e2b26;
+            color: #f5f0eb;
           }
           .hero h2 em { font-style: italic; color: #b0804a; }
           .hero p {
             font-size: 1rem;
-            color: #5a4f44;
+            color: #b5a89a;
             max-width: 400px;
           }
           .hero .btn-group {
@@ -130,35 +125,40 @@ export default function Home() {
             gap: 12px;
           }
 
-          /* ====== BOTTONI ====== */
+          /* BOTTONI - ORA VISIBILI */
           .btn {
-            padding: 12px 28px;
-            font-size: 0.7rem;
+            padding: 14px 32px;
+            font-size: 0.75rem;
+            font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
             text-decoration: none;
-            border: 1px solid #b0804a;
+            border: none;
             transition: 0.3s;
             cursor: pointer;
-            background: transparent;
-            color: #2e2b26;
-            border-radius: 4px;
-          }
-          .btn:hover {
-            background: #b0804a;
-            color: #f5f0eb;
+            border-radius: 6px;
+            display: inline-block;
           }
           .btn-primary {
             background: #b0804a;
             color: #f5f0eb;
-            border-color: #b0804a;
           }
           .btn-primary:hover {
             background: #c4956a;
-            border-color: #c4956a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(176,128,74,0.3);
+          }
+          .btn-outline {
+            background: transparent;
+            color: #f5f0eb;
+            border: 1px solid rgba(245,240,235,0.3);
+          }
+          .btn-outline:hover {
+            background: rgba(245,240,235,0.1);
+            border-color: #b0804a;
           }
 
-          /* ====== SEZIONI ====== */
+          /* SEZIONI */
           .section {
             margin-bottom: 80px;
             padding-bottom: 60px;
@@ -183,7 +183,7 @@ export default function Home() {
             color: #b0804a;
           }
 
-          /* ====== ABOUT ====== */
+          /* ABOUT CON SFONDO */
           .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -192,11 +192,11 @@ export default function Home() {
           }
           .about-grid .img {
             height: 280px;
-            border-radius: 12px;
-            background: #d6c9b7;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23d6c9b7"/><rect x="0" y="0" width="400" height="300" fill="url(%23g)" opacity="0.4"/><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%238a7a6a" opacity="0.3"/></pattern></defs><text x="200" y="160" font-family="Arial" font-size="80" fill="%238a7a6a" opacity="0.3" text-anchor="middle">🏛️</text></svg>');
+            border-radius: 16px;
+            background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop');
             background-size: cover;
             background-position: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
           }
           .about-grid p {
             font-size: 0.95rem;
@@ -213,7 +213,7 @@ export default function Home() {
             padding-left: 16px;
           }
 
-          /* ====== VINI ====== */
+          /* VINI CON IMMAGINI VERE */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -221,23 +221,21 @@ export default function Home() {
           }
           .wine-card {
             background: #f5f0eb;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid #e8e0d6;
             transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
           }
-          .wine-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+          .wine-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
           .wine-card .img-wine {
-            height: 160px;
+            height: 180px;
             background-size: cover;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
           }
-          .wine-card .img-wine.r1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23e8d6c9"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🍷</text></svg>'); }
-          .wine-card .img-wine.b1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23d6e8d6"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🥂</text></svg>'); }
-          .wine-card .img-wine.s1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23d6d6e8"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🍾</text></svg>'); }
+          .wine-card .img-wine.r1 { background-image: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&h=400&fit=crop'); }
+          .wine-card .img-wine.b1 { background-image: url('https://images.unsplash.com/photo-1568214379698-8a5876f9e8d2?w=600&h=400&fit=crop'); }
+          .wine-card .img-wine.s1 { background-image: url('https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=600&h=400&fit=crop'); }
           .wine-card .info {
             padding: 16px 20px 20px;
           }
@@ -263,7 +261,7 @@ export default function Home() {
             border-radius: 20px;
           }
 
-          /* ====== MENU ====== */
+          /* MENU */
           .menu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -293,7 +291,7 @@ export default function Home() {
             font-style: italic;
           }
 
-          /* ====== RECENSIONI ====== */
+          /* RECENSIONI */
           .review-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -302,10 +300,11 @@ export default function Home() {
           .review-card {
             background: #f5f0eb;
             padding: 24px;
-            border-radius: 12px;
+            border-radius: 16px;
             border-left: 4px solid #b0804a;
             border: 1px solid #e8e0d6;
             border-left-width: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
           }
           .review-card .stars {
             font-size: 1rem;
@@ -323,7 +322,7 @@ export default function Home() {
             margin-top: 8px;
           }
 
-          /* ====== CONTATTI ====== */
+          /* CONTATTI CON MAPPA VERA */
           .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -331,10 +330,11 @@ export default function Home() {
           }
           .contact-grid .map {
             height: 280px;
-            border-radius: 12px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="%23d6c9b7"/><rect x="0" y="0" width="400" height="300" fill="url(%23g)" opacity="0.4"/><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%238a7a6a" opacity="0.3"/></pattern></defs><text x="200" y="160" font-family="Arial" font-size="40" fill="%238a7a6a" opacity="0.3" text-anchor="middle">📍 Via Parea 3</text></svg>');
+            border-radius: 16px;
+            background-image: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&h=400&fit=crop');
             background-size: cover;
             background-position: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
           }
           .contact-info p {
             font-size: 0.9rem;
@@ -350,7 +350,7 @@ export default function Home() {
             margin-top: 16px;
             background: #f5f0eb;
             padding: 16px;
-            border-radius: 12px;
+            border-radius: 16px;
             border: 1px solid #e8e0d6;
           }
           .hours .row {
@@ -363,7 +363,7 @@ export default function Home() {
           }
           .hours .row:last-child { border-bottom: none; }
 
-          /* ====== RESPONSIVE ====== */
+          /* RESPONSIVE */
           @media (max-width: 1024px) {
             .site { grid-template-columns: 1fr; }
             .sidebar {
@@ -385,6 +385,8 @@ export default function Home() {
           }
           @media (max-width: 768px) {
             .hero { padding: 30px 20px; min-height: 200px; }
+            .hero-content { max-width: 100%; }
+            .hero-image-bg { display: none; }
             .hero h2 { font-size: 2.4rem; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -400,7 +402,7 @@ export default function Home() {
 
         <div className="site">
 
-          {/* ====== SIDEBAR ====== */}
+          {/* SIDEBAR */}
           <aside className="sidebar">
             <div>
               <h1>Il Gallo <span>Osteria</span></h1>
@@ -414,20 +416,19 @@ export default function Home() {
             <div className="footer-side">Stradella · dal 2014</div>
           </aside>
 
-          {/* ====== MAIN ====== */}
+          {/* MAIN */}
           <main className="main">
 
             {/* HERO */}
             <section className="hero">
-              <div className="hero-bg"></div>
-              <div className="hero-bg2"></div>
+              <div className="hero-image-bg"></div>
               <div className="hero-content">
                 <div className="tag">Osteria dal 2014</div>
                 <h2>Il <em>Gallo</em></h2>
                 <p>Cucina italiana · Carne alla brace · Cantina selezionata</p>
                 <div className="btn-group">
-                  <a href="tel:+390383123456" className="btn btn-primary">Chiama ora</a>
-                  <a href="#menu" className="btn">Scopri</a>
+                  <a href="tel:+390383123456" className="btn btn-primary">📞 Chiama ora</a>
+                  <a href="#menu" className="btn btn-outline">Scopri</a>
                 </div>
               </div>
             </section>
@@ -550,7 +551,7 @@ export default function Home() {
                     <div className="row"><span>Sabato</span><span>12–14 / 19:30–22</span></div>
                     <div className="row"><span>Domenica</span><span>12–14 / 19:30–22</span></div>
                   </div>
-                  <p style={{ marginTop: 16 }}><a href="tel:+390383123456" className="btn btn-primary" style={{ display: 'inline-block', padding: '10px 24px' }}>Chiama ora</a></p>
+                  <p style={{ marginTop: 16 }}><a href="tel:+390383123456" className="btn btn-primary" style={{ display: 'inline-block', padding: '10px 24px' }}>📞 Chiama ora</a></p>
                 </div>
               </div>
             </section>
