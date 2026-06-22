@@ -20,7 +20,6 @@ export default function Home() {
             min-height: 100vh;
           }
 
-          /* SIDEBAR */
           .sidebar {
             background: #1a1a1a;
             padding: 40px 20px;
@@ -69,7 +68,6 @@ export default function Home() {
             max-height: 100vh;
           }
 
-          /* HERO CON SFONDO ANIMATO E FOTO REALE */
           .hero {
             margin-bottom: 80px;
             padding: 60px 50px;
@@ -138,7 +136,6 @@ export default function Home() {
             gap: 12px;
           }
 
-          /* BOTTONI */
           .btn {
             padding: 14px 32px;
             font-size: 0.75rem;
@@ -171,7 +168,6 @@ export default function Home() {
             border-color: #b0804a;
           }
 
-          /* SEZIONI */
           .section {
             margin-bottom: 80px;
             padding-bottom: 60px;
@@ -196,7 +192,6 @@ export default function Home() {
             color: #b0804a;
           }
 
-          /* ABOUT CON FOTO REALE */
           .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -226,7 +221,6 @@ export default function Home() {
             padding-left: 16px;
           }
 
-          /* VINI CON FOTO REALI DI VINI */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -274,7 +268,6 @@ export default function Home() {
             border-radius: 20px;
           }
 
-          /* MENU */
           .menu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -304,7 +297,6 @@ export default function Home() {
             font-style: italic;
           }
 
-          /* RECENSIONI */
           .review-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -335,7 +327,6 @@ export default function Home() {
             margin-top: 8px;
           }
 
-          /* CONTATTI CON FOTO REALE */
           .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -376,7 +367,6 @@ export default function Home() {
           }
           .hours .row:last-child { border-bottom: none; }
 
-          /* RESPONSIVE */
           @media (max-width: 1024px) {
             .site { grid-template-columns: 1fr; }
             .sidebar {
@@ -415,7 +405,6 @@ export default function Home() {
 
         <div className="site">
 
-          {/* SIDEBAR */}
           <aside className="sidebar">
             <div>
               <h1>Il Gallo <span>Osteria</span></h1>
@@ -429,10 +418,8 @@ export default function Home() {
             <div className="footer-side">Stradella · dal 2014</div>
           </aside>
 
-          {/* MAIN */}
           <main className="main">
 
-            {/* HERO */}
             <section className="hero">
               <div className="hero-image-bg"></div>
               <div className="hero-content">
@@ -446,7 +433,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* VINI */}
             <section className="section" id="vini">
               <h3>La cantina</h3>
               <p className="sub">Etichette selezionate dai nostri sommelier</p>
@@ -478,7 +464,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* ABOUT */}
             <section className="section" id="chi-siamo">
               <h3>L'osteria</h3>
               <p className="sub">Tradizione e ospitalità dal 2014</p>
@@ -492,7 +477,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* MENU */}
             <section className="section" id="menu">
               <h3>Il menù</h3>
               <p className="sub">I nostri classici, dalla tradizione alla brace</p>
@@ -523,7 +507,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* RECENSIONI */}
             <section className="section" id="recensioni">
               <h3>Recensioni</h3>
               <p className="sub">Cosa dicono di noi</p>
@@ -546,7 +529,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* CONTATTI */}
             <section className="section" id="contatti">
               <h3>Dove siamo</h3>
               <p className="sub">Vieni a trovarci a Stradella</p>
