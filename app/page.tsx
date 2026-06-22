@@ -6,11 +6,10 @@ export default function Home() {
         <meta name="description" content="Osteria Il Gallo a Stradella. Cucina italiana, carne alla brace." />
         <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
         <style>{`
-          /* ====== RESET ====== */
           * { margin: 0; padding: 0; box-sizing: border-box; }
           body {
             font-family: 'Inter', sans-serif;
-            background: #fcf8f2;
+            background: #f5f0eb;
             color: #2e2b26;
             line-height: 1.6;
           }
@@ -32,19 +31,19 @@ export default function Home() {
             position: sticky;
             top: 0;
             height: 100vh;
-            border-right: 4px solid #c97b5a;
+            border-right: 4px solid #b0804a;
           }
           .sidebar h1 {
             font-size: 1.4rem;
             font-weight: 300;
             letter-spacing: 4px;
-            color: #fcf8f2;
+            color: #f5f0eb;
           }
           .sidebar h1 span {
             display: block;
             font-size: 0.6rem;
             letter-spacing: 6px;
-            color: #c97b5a;
+            color: #b0804a;
             margin-top: 4px;
           }
           .sidebar nav a {
@@ -58,7 +57,7 @@ export default function Home() {
             border-bottom: 1px solid #3d3832;
             transition: 0.3s;
           }
-          .sidebar nav a:hover { color: #c97b5a; padding-left: 8px; }
+          .sidebar nav a:hover { color: #b0804a; padding-left: 8px; }
           .sidebar .footer-side {
             font-size: 0.6rem;
             color: #4a443e;
@@ -72,28 +71,44 @@ export default function Home() {
             max-height: 100vh;
           }
 
-          /* ====== HERO - CHIARA E LEGGIBILE ====== */
+          /* ====== HERO ====== */
           .hero {
             margin-bottom: 80px;
-            padding: 50px 40px;
-            background: #fcf8f2;
-            border-radius: 8px;
-            border: 1px solid #e8e0d6;
+            padding: 60px 50px;
+            background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d6 100%);
+            border-radius: 12px;
             position: relative;
             overflow: hidden;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
           }
-          .hero::before {
-            content: '🍷';
+          .hero-bg {
             position: absolute;
-            right: 30px;
-            bottom: 20px;
-            font-size: 8rem;
-            opacity: 0.06;
+            right: -40px;
+            bottom: -40px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(176,128,74,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+          }
+          .hero-bg2 {
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(176,128,74,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+          }
+          .hero-content {
+            position: relative;
+            z-index: 2;
           }
           .hero .tag {
             font-size: 0.6rem;
             letter-spacing: 3px;
-            color: #c97b5a;
+            color: #b0804a;
             text-transform: uppercase;
           }
           .hero h2 {
@@ -103,7 +118,7 @@ export default function Home() {
             margin: 8px 0 16px;
             color: #2e2b26;
           }
-          .hero h2 em { font-style: italic; color: #c97b5a; }
+          .hero h2 em { font-style: italic; color: #b0804a; }
           .hero p {
             font-size: 1rem;
             color: #5a4f44;
@@ -114,13 +129,15 @@ export default function Home() {
             display: flex;
             gap: 12px;
           }
+
+          /* ====== BOTTONI ====== */
           .btn {
             padding: 12px 28px;
             font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             text-decoration: none;
-            border: 1px solid #c97b5a;
+            border: 1px solid #b0804a;
             transition: 0.3s;
             cursor: pointer;
             background: transparent;
@@ -128,24 +145,24 @@ export default function Home() {
             border-radius: 4px;
           }
           .btn:hover {
-            background: #c97b5a;
-            color: #fcf8f2;
+            background: #b0804a;
+            color: #f5f0eb;
           }
           .btn-primary {
-            background: #c97b5a;
-            color: #fcf8f2;
-            border-color: #c97b5a;
+            background: #b0804a;
+            color: #f5f0eb;
+            border-color: #b0804a;
           }
           .btn-primary:hover {
-            background: #d48e6e;
-            border-color: #d48e6e;
+            background: #c4956a;
+            border-color: #c4956a;
           }
 
           /* ====== SEZIONI ====== */
           .section {
             margin-bottom: 80px;
             padding-bottom: 60px;
-            border-bottom: 2px dashed #e8e0d6;
+            border-bottom: 2px dashed #d6c9b7;
           }
           .section:last-child { border-bottom: none; margin-bottom: 0; }
 
@@ -163,7 +180,7 @@ export default function Home() {
           }
           .section .sub::before {
             content: '✦ ';
-            color: #c97b5a;
+            color: #b0804a;
           }
 
           /* ====== ABOUT ====== */
@@ -174,15 +191,12 @@ export default function Home() {
             align-items: center;
           }
           .about-grid .img {
-            height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            border-radius: 8px;
-            background: #e8e0d6;
-            background-image: 
-              repeating-linear-gradient(45deg, #d6c9b7 0px, #d6c9b7 2px, transparent 2px, transparent 8px);
+            height: 280px;
+            border-radius: 12px;
+            background: #d6c9b7;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23d6c9b7"/><rect x="0" y="0" width="400" height="300" fill="url(%23g)" opacity="0.4"/><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%238a7a6a" opacity="0.3"/></pattern></defs><text x="200" y="160" font-family="Arial" font-size="80" fill="%238a7a6a" opacity="0.3" text-anchor="middle">🏛️</text></svg>');
+            background-size: cover;
+            background-position: center;
           }
           .about-grid p {
             font-size: 0.95rem;
@@ -191,38 +205,39 @@ export default function Home() {
           }
           .about-grid .sigla {
             font-style: italic;
-            color: #c97b5a;
+            color: #b0804a;
             font-size: 0.9rem;
             margin-top: 8px;
             display: inline-block;
-            border-left: 3px solid #c97b5a;
+            border-left: 3px solid #b0804a;
             padding-left: 16px;
           }
 
-          /* ====== VINI - CON IMMAGINI ====== */
+          /* ====== VINI ====== */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
           }
           .wine-card {
-            background: #fcf8f2;
-            border-radius: 8px;
+            background: #f5f0eb;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid #e8e0d6;
             transition: 0.3s;
           }
           .wine-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
           .wine-card .img-wine {
-            height: 150px;
+            height: 160px;
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
           }
-          .wine-card .img-wine.r { background: #f0e4d6; }
-          .wine-card .img-wine.b { background: #e4f0e4; }
-          .wine-card .img-wine.s { background: #e4e4f0; }
+          .wine-card .img-wine.r1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23e8d6c9"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🍷</text></svg>'); }
+          .wine-card .img-wine.b1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23d6e8d6"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🥂</text></svg>'); }
+          .wine-card .img-wine.s1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23d6d6e8"/><text x="200" y="120" font-family="Arial" font-size="60" fill="%23b0804a" opacity="0.6" text-anchor="middle">🍾</text></svg>'); }
           .wine-card .info {
             padding: 16px 20px 20px;
           }
@@ -241,9 +256,9 @@ export default function Home() {
             display: inline-block;
             margin-top: 8px;
             font-size: 0.6rem;
-            color: #c97b5a;
+            color: #b0804a;
             letter-spacing: 1px;
-            border: 1px solid #c97b5a;
+            border: 1px solid #b0804a;
             padding: 2px 12px;
             border-radius: 20px;
           }
@@ -258,8 +273,8 @@ export default function Home() {
             font-size: 1rem;
             font-weight: 400;
             letter-spacing: 2px;
-            color: #c97b5a;
-            border-bottom: 2px solid #c97b5a;
+            color: #b0804a;
+            border-bottom: 2px solid #b0804a;
             padding-bottom: 6px;
             margin-bottom: 16px;
           }
@@ -270,7 +285,7 @@ export default function Home() {
             padding: 8px 0;
             border-bottom: 1px solid #f0ece6;
           }
-          .menu-item .price { color: #c97b5a; }
+          .menu-item .price { color: #b0804a; }
           .menu-item .desc {
             display: block;
             font-size: 0.65rem;
@@ -285,16 +300,16 @@ export default function Home() {
             gap: 30px;
           }
           .review-card {
-            background: #fcf8f2;
+            background: #f5f0eb;
             padding: 24px;
-            border-radius: 8px;
-            border-left: 4px solid #c97b5a;
+            border-radius: 12px;
+            border-left: 4px solid #b0804a;
             border: 1px solid #e8e0d6;
             border-left-width: 4px;
           }
           .review-card .stars {
             font-size: 1rem;
-            color: #c97b5a;
+            color: #b0804a;
             margin-bottom: 4px;
           }
           .review-card p {
@@ -315,15 +330,11 @@ export default function Home() {
             gap: 40px;
           }
           .contact-grid .map {
-            height: 240px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            border-radius: 8px;
-            background: #e8e0d6;
-            background-image: 
-              repeating-linear-gradient(45deg, #d6c9b7 0px, #d6c9b7 2px, transparent 2px, transparent 8px);
+            height: 280px;
+            border-radius: 12px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="%23d6c9b7"/><rect x="0" y="0" width="400" height="300" fill="url(%23g)" opacity="0.4"/><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%238a7a6a" opacity="0.3"/></pattern></defs><text x="200" y="160" font-family="Arial" font-size="40" fill="%238a7a6a" opacity="0.3" text-anchor="middle">📍 Via Parea 3</text></svg>');
+            background-size: cover;
+            background-position: center;
           }
           .contact-info p {
             font-size: 0.9rem;
@@ -331,15 +342,15 @@ export default function Home() {
             margin-bottom: 6px;
           }
           .contact-info a {
-            color: #c97b5a;
+            color: #b0804a;
             text-decoration: none;
-            border-bottom: 1px solid #c97b5a;
+            border-bottom: 1px solid #b0804a;
           }
           .hours {
             margin-top: 16px;
-            background: #fcf8f2;
+            background: #f5f0eb;
             padding: 16px;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid #e8e0d6;
           }
           .hours .row {
@@ -362,7 +373,7 @@ export default function Home() {
               padding: 20px 30px;
               align-items: center;
               border-right: none;
-              border-bottom: 4px solid #c97b5a;
+              border-bottom: 4px solid #b0804a;
             }
             .sidebar nav { display: flex; gap: 20px; }
             .sidebar nav a { border-bottom: none; padding: 4px 0; }
@@ -373,7 +384,7 @@ export default function Home() {
             .review-grid { grid-template-columns: 1fr 1fr; }
           }
           @media (max-width: 768px) {
-            .hero { padding: 30px 20px; }
+            .hero { padding: 30px 20px; min-height: 200px; }
             .hero h2 { font-size: 2.4rem; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -408,12 +419,16 @@ export default function Home() {
 
             {/* HERO */}
             <section className="hero">
-              <div className="tag">Osteria dal 2014</div>
-              <h2>Il <em>Gallo</em></h2>
-              <p>Cucina italiana · Carne alla brace · Cantina selezionata</p>
-              <div className="btn-group">
-                <a href="tel:+390383123456" className="btn btn-primary">Chiama ora</a>
-                <a href="#menu" className="btn">Scopri</a>
+              <div className="hero-bg"></div>
+              <div className="hero-bg2"></div>
+              <div className="hero-content">
+                <div className="tag">Osteria dal 2014</div>
+                <h2>Il <em>Gallo</em></h2>
+                <p>Cucina italiana · Carne alla brace · Cantina selezionata</p>
+                <div className="btn-group">
+                  <a href="tel:+390383123456" className="btn btn-primary">Chiama ora</a>
+                  <a href="#menu" className="btn">Scopri</a>
+                </div>
               </div>
             </section>
 
@@ -423,7 +438,7 @@ export default function Home() {
               <p className="sub">Etichette selezionate dai nostri sommelier</p>
               <div className="wine-grid">
                 <div className="wine-card">
-                  <div className="img-wine r">🍷</div>
+                  <div className="img-wine r1"></div>
                   <div className="info">
                     <h4>Rossi</h4>
                     <p>Barolo · Brunello · Montefalco</p>
@@ -431,7 +446,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="wine-card">
-                  <div className="img-wine b">🥂</div>
+                  <div className="img-wine b1"></div>
                   <div className="info">
                     <h4>Bianchi</h4>
                     <p>Gavi · Pinot Grigio · Sauvignon</p>
@@ -439,7 +454,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="wine-card">
-                  <div className="img-wine s">🍾</div>
+                  <div className="img-wine s1"></div>
                   <div className="info">
                     <h4>Bollicine</h4>
                     <p>Franciacorta · Prosecco</p>
@@ -454,7 +469,7 @@ export default function Home() {
               <h3>L'osteria</h3>
               <p className="sub">Tradizione e ospitalità dal 2014</p>
               <div className="about-grid">
-                <div className="img">🏛️</div>
+                <div className="img"></div>
                 <div>
                   <p>L'Osteria Il Gallo è nata nel 2014 dalla passione per la cucina italiana e l'ospitalità. Ogni piatto racconta una storia di famiglia e tradizione.</p>
                   <p>Dalla fiorentina alla brace alla pasta fresca fatta in casa, tutto è preparato con ingredienti selezionati.</p>
@@ -522,7 +537,7 @@ export default function Home() {
               <h3>Dove siamo</h3>
               <p className="sub">Vieni a trovarci a Stradella</p>
               <div className="contact-grid">
-                <div className="map">📍</div>
+                <div className="map"></div>
                 <div className="contact-info">
                   <p>Via Parea, 3 · Stradella (PV)</p>
                   <p><a href="https://www.google.com/maps?q=Via+Parea+3+Stradella">Apri su Google Maps →</a></p>
