@@ -14,6 +14,7 @@ export default function Home() {
             line-height: 1.6;
           }
 
+          /* LAYOUT */
           .site {
             display: grid;
             grid-template-columns: 200px 1fr;
@@ -70,18 +71,31 @@ export default function Home() {
             max-height: 100vh;
           }
 
-          /* HERO CON SFONDO */
+          /* HERO - sfondo animato */
           .hero {
             margin-bottom: 80px;
             padding: 60px 50px;
             border-radius: 16px;
             position: relative;
             overflow: hidden;
-            min-height: 320px;
+            min-height: 350px;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #2e2b26 0%, #4a3f38 100%);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2e2b26 100%);
+          }
+          .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(176,128,74,0.15) 0%, transparent 70%);
+            animation: pulse 6s ease-in-out infinite;
+          }
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
           }
           .hero-image-bg {
             position: absolute;
@@ -89,16 +103,16 @@ export default function Home() {
             right: 0;
             width: 50%;
             height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop');
             background-size: cover;
             background-position: center;
-            opacity: 0.3;
+            opacity: 0.2;
             border-radius: 0 16px 16px 0;
           }
           .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 60%;
+            max-width: 55%;
           }
           .hero .tag {
             font-size: 0.6rem;
@@ -107,7 +121,7 @@ export default function Home() {
             text-transform: uppercase;
           }
           .hero h2 {
-            font-size: 3.6rem;
+            font-size: 3.8rem;
             font-weight: 300;
             letter-spacing: -1px;
             margin: 8px 0 16px;
@@ -125,7 +139,7 @@ export default function Home() {
             gap: 12px;
           }
 
-          /* BOTTONI - ORA VISIBILI */
+          /* BOTTONI */
           .btn {
             padding: 14px 32px;
             font-size: 0.75rem;
@@ -183,7 +197,7 @@ export default function Home() {
             color: #b0804a;
           }
 
-          /* ABOUT CON SFONDO */
+          /* ABOUT */
           .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -213,7 +227,7 @@ export default function Home() {
             padding-left: 16px;
           }
 
-          /* VINI CON IMMAGINI VERE */
+          /* VINI - CON IMMAGINI VERE */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -322,7 +336,7 @@ export default function Home() {
             margin-top: 8px;
           }
 
-          /* CONTATTI CON MAPPA VERA */
+          /* CONTATTI */
           .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
