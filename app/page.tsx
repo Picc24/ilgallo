@@ -6,25 +6,25 @@ export default function Home() {
         <meta name="description" content="Osteria Il Gallo a Stradella. Cucina italiana di classe, carne alla brace, pasta fresca e una cantina ricca di etichette pregiate." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet" />
         <style>{`
           * { margin: 0; padding: 0; box-sizing: border-box; }
 
           body {
-            font-family: 'Inter', sans-serif;
-            background: #1A1513;
-            color: #E8DFD8;
-            line-height: 1.6;
+            font-family: 'Nunito Sans', sans-serif;
+            background: #EDE8E0;
+            color: #2C2420;
+            line-height: 1.7;
           }
           .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-          /* NAVBAR - scura ed elegante */
+          /* NAVBAR - completamente diversa */
           .navbar {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 18px 0;
-            background: rgba(26,21,19,0.95);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(232,223,216,0.08);
+            background: rgba(237,232,224,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #D5CEC4;
           }
           .navbar .container {
             display: flex; align-items: center; justify-content: space-between;
@@ -32,15 +32,15 @@ export default function Home() {
           .logo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem; font-weight: 700;
-            color: #E8DFD8;
+            color: #2C2420;
             text-decoration: none;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.02em;
           }
-          .logo-icon { color: #9C7A5A; margin-right: 6px; }
+          .logo-icon { color: #8B7355; margin-right: 4px; }
           .logo span {
             display: block; font-size: 0.55rem; font-weight: 400;
-            letter-spacing: 0.3em; text-transform: uppercase;
-            color: #9C7A5A; font-family: 'Inter', sans-serif;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: #8B7355; font-family: 'Nunito Sans', sans-serif;
             margin-top: -4px;
           }
           .nav-links {
@@ -48,7 +48,7 @@ export default function Home() {
           }
           .nav-links a {
             font-size: 0.75rem; font-weight: 500;
-            color: #E8DFD8; opacity: 0.6;
+            color: #2C2420; opacity: 0.6;
             text-decoration: none;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -62,292 +62,264 @@ export default function Home() {
           }
           .hamburger span {
             display: block; width: 26px; height: 1.5px;
-            background: #E8DFD8; border-radius: 2px;
+            background: #2C2420; border-radius: 2px;
             transition: 0.3s ease;
           }
 
-          /* BUTTONS - stile diverso */
+          /* BUTTONS - completamente diversi */
           .btn {
             display: inline-flex; align-items: center; justify-content: center;
-            gap: 10px; padding: 16px 40px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500; font-size: 0.85rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+            gap: 10px; padding: 14px 36px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 600; font-size: 0.85rem;
+            letter-spacing: 0.04em;
             border: none; cursor: pointer;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
           }
           .btn-primary {
-            background: #9C7A5A;
-            color: #1A1513;
+            background: #8B7355;
+            color: #FFFFFF;
+            border-radius: 4px;
           }
           .btn-primary:hover {
-            background: #B89572;
+            background: #A0896B;
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(156,122,90,0.3);
+            box-shadow: 0 8px 24px rgba(139,115,85,0.25);
           }
           .btn-outline {
             background: transparent;
-            color: #E8DFD8;
-            border: 1px solid rgba(232,223,216,0.2);
+            color: #2C2420;
+            border: 1px solid #8B7355;
+            border-radius: 4px;
           }
           .btn-outline:hover {
-            border-color: #9C7A5A;
-            color: #9C7A5A;
+            background: #8B7355;
+            color: #FFFFFF;
             transform: translateY(-2px);
           }
           .btn-phone {
-            background: transparent;
-            color: #E8DFD8;
-            border: 1px solid #9C7A5A;
+            background: #6B2D2D;
+            color: #FFFFFF;
+            border-radius: 4px;
           }
           .btn-phone:hover {
-            background: #9C7A5A;
-            color: #1A1513;
+            background: #8A3A3A;
             transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107,45,45,0.25);
           }
 
-          /* HERO - diverso, con overlay */
+          /* HERO - layout completamente diverso */
           .hero {
             min-height: 100vh; display: flex; align-items: center;
             padding: 140px 0 80px;
-            position: relative;
-            background: #1A1513;
-          }
-          .hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: 
-              radial-gradient(ellipse 60% 40% at 80% 20%, rgba(156,122,90,0.12) 0%, transparent 70%),
-              radial-gradient(ellipse 40% 60% at 20% 80%, rgba(156,122,90,0.06) 0%, transparent 60%);
-            pointer-events: none;
+            background: #EDE8E0;
           }
           .hero .container {
-            position: relative; z-index: 2;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
           }
-          .hero-content { max-width: 580px; }
+          .hero-content { max-width: 560px; }
           .eyebrow {
-            display: inline-block; font-family: 'Inter', sans-serif;
-            font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em;
-            text-transform: uppercase; color: #9C7A5A;
+            display: inline-block; font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.6rem; font-weight: 500; letter-spacing: 0.15em;
+            text-transform: uppercase; color: #8B7355;
             margin-bottom: 0.75rem;
           }
           .eyebrow::after {
             content: ''; display: inline-block; width: 40px; height: 1px;
-            background: #9C7A5A; margin-left: 14px; vertical-align: middle;
+            background: #8B7355; margin-left: 12px; vertical-align: middle;
           }
           .hero-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3.8rem, 9vw, 6rem); font-weight: 700;
-            line-height: 1.05; color: #E8DFD8; margin-bottom: 0.5rem;
+            font-size: clamp(3.5rem, 8vw, 5.5rem); font-weight: 700;
+            line-height: 1.05; color: #2C2420; margin-bottom: 0.5rem;
           }
-          .hero-title em { font-style: italic; color: #9C7A5A; }
+          .hero-title em { font-style: italic; color: #8B7355; }
           .hero-subtitle {
-            font-size: 1.1rem; font-weight: 300; color: #B5A89A;
-            margin-bottom: 1.5rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            letter-spacing: 0.02em;
+            font-size: 1.1rem; font-weight: 400; color: #2C2420;
+            opacity: 0.7; margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif; font-style: italic;
           }
           .hero-desc {
-            font-size: 0.95rem; color: #B5A89A;
-            max-width: 420px; line-height: 1.8; margin-bottom: 2rem;
+            font-size: 0.95rem; color: #2C2420; opacity: 0.7;
+            max-width: 440px; line-height: 1.8; margin-bottom: 2rem;
             font-weight: 300;
           }
           .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
           .hero-image {
-            background: rgba(232,223,216,0.04);
-            border: 1px solid rgba(232,223,216,0.06);
+            background: #D5CEC4;
             height: 500px;
             display: flex; align-items: center; justify-content: center;
-            color: rgba(232,223,216,0.2); font-size: 1rem;
-            position: relative;
-          }
-          .hero-image::after {
-            content: '⸻';
-            position: absolute; bottom: 24px; left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem; color: rgba(156,122,90,0.3);
+            color: #2C2420; opacity: 0.4; font-size: 1rem;
           }
 
-          /* SECTIONS - stile minimal */
-          .section { padding: 100px 0; }
-          .section-alt { background: #221C19; }
-          .section-header { margin-bottom: 4rem; }
+          /* SECTIONS */
+          .section { padding: 80px 0; }
+          .section-alt { background: #FFFFFF; }
+          .section-dark {
+            background: #2C2420;
+            color: #EDE8E0;
+          }
+          .section-dark .section-title { color: #EDE8E0; }
+          .section-dark .section-sub { color: #B5A89A; }
+          .section-dark .eyebrow { color: #8B7355; }
+          .section-dark .eyebrow::after { background: #8B7355; }
+
+          .section-header { margin-bottom: 3rem; }
           .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 4vw, 3.6rem);
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
             font-weight: 700; margin-bottom: 0.75rem;
-            color: #E8DFD8;
+            color: #2C2420;
           }
           .section-sub {
-            font-size: 0.95rem; color: #B5A89A;
+            font-size: 1rem; color: #2C2420; opacity: 0.6;
             max-width: 520px; line-height: 1.8; font-weight: 300;
           }
 
-          /* ABOUT - stile diverso, senza card */
+          /* ABOUT - diverso */
           .about-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
           }
           .about-text p {
-            font-size: 0.95rem; color: #B5A89A; line-height: 1.9;
+            font-size: 0.95rem; opacity: 0.7; line-height: 1.9;
             margin-bottom: 1.2rem; font-weight: 300;
           }
           .about-stats {
-            display: flex; gap: 48px; margin-top: 2.5rem;
+            display: flex; gap: 48px; margin-top: 2rem;
           }
           .about-stats .stat { text-align: left; }
           .about-stats .number {
             display: block; font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem; font-weight: 700; color: #9C7A5A;
+            font-size: 2.6rem; font-weight: 700; color: #8B7355;
             line-height: 1.1;
           }
           .about-stats .label {
-            font-size: 0.7rem; color: #B5A89A; letter-spacing: 0.08em;
+            font-size: 0.7rem; opacity: 0.5; letter-spacing: 0.08em;
             text-transform: uppercase; font-weight: 300;
           }
           .about-image {
-            background: rgba(232,223,216,0.04);
-            border: 1px solid rgba(232,223,216,0.06);
-            height: 420px;
+            background: #D5CEC4; height: 400px;
             display: flex; align-items: center; justify-content: center;
-            color: rgba(232,223,216,0.15); font-size: 1rem;
+            color: #2C2420; opacity: 0.4; font-size: 1rem;
           }
 
-          /* MENU - stile griglia */
+          /* MENU - griglia 2 colonne diversa */
           .menu-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
-            margin-top: 40px;
-            background: rgba(232,223,216,0.06);
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;
           }
           .menu-card {
-            background: #1A1513; padding: 40px 36px;
+            background: #FFFFFF; padding: 32px 28px;
+            border-left: 4px solid #8B7355;
           }
-          .menu-card:nth-child(odd) { background: #1F1916; }
-          .menu-card .icon { font-size: 2.2rem; margin-bottom: 0.75rem; display: block; opacity: 0.5; }
+          .menu-card .icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; opacity: 0.5; }
           .menu-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem; font-weight: 600; color: #E8DFD8;
-            margin-bottom: 1.5rem; letter-spacing: 0.02em;
+            font-size: 1.3rem; font-weight: 600; margin-bottom: 1.2rem;
+            border-bottom: 1px solid #D5CEC4; padding-bottom: 0.5rem;
           }
           .menu-item {
             display: flex; justify-content: space-between; align-items: baseline;
-            padding: 10px 0; border-bottom: 1px solid rgba(232,223,216,0.04);
-            gap: 12px;
+            padding: 8px 0; border-bottom: 1px solid #EDE8E0; gap: 12px;
           }
           .menu-item:last-child { border-bottom: none; }
-          .menu-item .name { font-weight: 400; font-size: 0.9rem; color: #D5CEC4; }
+          .menu-item .name { font-weight: 400; font-size: 0.9rem; }
           .menu-item .name .desc {
             display: block; font-weight: 300; font-size: 0.75rem;
-            color: #9C8A7A; margin-top: 2px;
+            opacity: 0.6; margin-top: 2px;
           }
           .menu-item .price {
-            font-weight: 400; color: #9C7A5A; white-space: nowrap;
-            font-size: 0.9rem; font-family: 'Cormorant Garamond', serif;
+            font-weight: 400; color: #8B7355; white-space: nowrap;
+            font-size: 0.9rem;
           }
           .menu-cta { text-align: center; margin-top: 3rem; }
 
-          /* WINE - stile diverso con linee */
-          .wine-section {
-            background: #221C19;
-            border-top: 1px solid rgba(232,223,216,0.04);
-            border-bottom: 1px solid rgba(232,223,216,0.04);
-          }
+          /* WINE - sezione scura diversa */
           .wine-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px;
           }
           .wine-card {
             padding: 24px 0;
-            border-bottom: 1px solid rgba(232,223,216,0.04);
+            border-bottom: 1px solid rgba(232,223,216,0.08);
           }
           .wine-card h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem; color: #9C7A5A; margin-bottom: 0.3rem;
+            font-size: 1.1rem; color: #8B7355; margin-bottom: 0.3rem;
             font-weight: 600;
           }
-          .wine-card p { font-size: 0.8rem; color: #9C8A7A; font-weight: 300; }
+          .wine-card p { font-size: 0.8rem; color: #B5A89A; font-weight: 300; }
 
-          /* REVIEWS - stile minimal */
+          /* REVIEWS - diverso */
           .reviews-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;
           }
           .review-card {
-            padding: 28px 0;
-            border-top: 1px solid rgba(232,223,216,0.04);
+            padding: 24px 0;
+            border-top: 1px solid #EDE8E0;
           }
-          .review-card .stars {
-            color: #9C7A5A; font-size: 0.9rem; margin-bottom: 0.75rem;
-            letter-spacing: 4px;
-          }
+          .review-card .stars { color: #8B7355; font-size: 0.9rem; margin-bottom: 0.5rem; letter-spacing: 2px; }
           .review-card .text {
             font-style: italic; font-size: 0.9rem; line-height: 1.7;
-            margin-bottom: 1rem; color: #D5CEC4; font-weight: 300;
+            margin-bottom: 1rem; opacity: 0.8; font-weight: 300;
           }
-          .review-card .author {
-            font-weight: 400; font-size: 0.8rem; color: #B5A89A;
-          }
-          .review-card .date { font-weight: 300; opacity: 0.4; font-size: 0.7rem; margin-left: 8px; }
+          .review-card .author { font-weight: 500; font-size: 0.85rem; }
+          .review-card .date { font-weight: 300; opacity: 0.4; font-size: 0.75rem; margin-left: 6px; }
 
-          /* CONTACT - stile diverso */
+          /* CONTACT - diverso */
           .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 40px;
           }
           .contact-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem; font-weight: 600; color: #9C7A5A;
-            margin-bottom: 0.75rem; letter-spacing: 0.06em;
+            font-size: 1rem; font-weight: 600; color: #8B7355;
+            margin-bottom: 0.75rem; letter-spacing: 0.04em;
           }
           .contact-card p, .contact-card a {
-            font-size: 0.9rem; color: #B5A89A; line-height: 1.8; display: block;
+            font-size: 0.9rem; opacity: 0.7; line-height: 1.8; display: block;
             font-weight: 300;
           }
-          .contact-card a { color: #9C7A5A; font-weight: 400; text-decoration: none; }
+          .contact-card a { color: #8B7355; font-weight: 400; text-decoration: none; }
           .contact-card a:hover { text-decoration: underline; }
           .contact-hours { display: flex; flex-direction: column; gap: 4px; }
           .contact-hours .day {
             display: flex; justify-content: space-between; font-size: 0.85rem;
-            padding: 6px 0; border-bottom: 1px solid rgba(232,223,216,0.04);
-            color: #B5A89A;
+            padding: 6px 0; border-bottom: 1px solid #EDE8E0;
           }
-          .contact-hours .day span:last-child { color: #9C8A7A; }
+          .contact-hours .day span:last-child { opacity: 0.6; }
           .contact-cta-box {
-            margin-top: 60px; padding: 60px 40px;
-            background: #221C19;
-            text-align: center;
-            border: 1px solid rgba(232,223,216,0.04);
+            margin-top: 50px; padding: 48px 40px;
+            background: #2C2420; text-align: center;
+            color: #FFFFFF;
           }
           .contact-cta-box h3 {
-            color: #E8DFD8; font-size: 2.2rem; font-weight: 700;
+            color: #FFFFFF; font-size: 2rem; font-weight: 700;
             font-family: 'Cormorant Garamond', serif;
             margin-bottom: 0.5rem;
           }
-          .contact-cta-box p { color: #9C8A7A; font-weight: 300; margin-bottom: 2rem; }
+          .contact-cta-box p { opacity: 0.6; font-weight: 300; margin-bottom: 1.8rem; }
 
-          /* FOOTER */
+          /* FOOTER - diverso */
           .footer {
-            border-top: 1px solid rgba(232,223,216,0.04);
-            background: #1A1513;
+            border-top: 1px solid #D5CEC4; background: #FFFFFF;
             padding: 40px 0 30px; text-align: center;
           }
           .footer-logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem; font-weight: 700; color: #E8DFD8;
+            font-size: 1.6rem; font-weight: 700; color: #2C2420;
           }
           .footer-logo span {
             display: block; font-size: 0.6rem; font-weight: 300;
-            opacity: 0.3; letter-spacing: 0.2em; text-transform: uppercase;
-            font-family: 'Inter', sans-serif;
+            opacity: 0.4; letter-spacing: 0.15em; text-transform: uppercase;
+            font-family: 'Nunito Sans', sans-serif;
           }
-          .footer-text { font-size: 0.8rem; color: #9C8A7A; margin-top: 0.5rem; font-weight: 300; }
+          .footer-text { font-size: 0.85rem; opacity: 0.5; margin-top: 0.5rem; font-weight: 300; }
           .footer-links {
             display: flex; justify-content: center; gap: 2.5rem;
             margin: 1.5rem 0; flex-wrap: wrap;
           }
-          .footer-links a { font-size: 0.75rem; color: #9C7A5A; font-weight: 400; text-decoration: none; letter-spacing: 0.06em; }
+          .footer-links a { font-size: 0.8rem; color: #8B7355; font-weight: 400; text-decoration: none; }
           .footer-links a:hover { text-decoration: underline; }
-          .footer-copy { font-size: 0.6rem; opacity: 0.2; margin-top: 0.5rem; letter-spacing: 0.04em; }
+          .footer-copy { font-size: 0.65rem; opacity: 0.2; margin-top: 0.5rem; letter-spacing: 0.04em; }
 
           @media (max-width: 1024px) {
             .hero .container { grid-template-columns: 1fr; gap: 40px; }
@@ -367,8 +339,8 @@ export default function Home() {
             .nav-links {
               display: none; flex-direction: column; gap: 16px;
               position: absolute; top: 72px; left: 0; right: 0;
-              background: #1A1513; padding: 24px;
-              border-bottom: 1px solid rgba(232,223,216,0.06);
+              background: #FFFFFF; padding: 24px;
+              border-bottom: 1px solid #D5CEC4;
             }
             .nav-links.open { display: flex; }
             .hamburger { display: flex; }
@@ -395,7 +367,7 @@ export default function Home() {
           <div className="container">
             <a href="/" className="logo">
               <span className="logo-icon">⸻</span> Il Gallo
-              <span>Osteria · Stradella</span>
+              <span>Osteria</span>
             </a>
             <div className="nav-links" id="navLinks">
               <a href="#menu">Menù</a>
@@ -418,7 +390,7 @@ export default function Home() {
               <h1 className="hero-title">Il <em>Gallo</em></h1>
               <p className="hero-subtitle">Cucina di classe · Carne alla brace · Cantina pregiat</p>
               <p className="hero-desc">
-                Un'osteria dove la qualità degli ingredienti e il calore dell'ospitalità si incontrano in un'atmosfera elegante e senza tempo.
+                Un'osteria dove la qualità degli ingredienti e il calore dell'ospitalità si incontrano in un'atmosfera elegante.
               </p>
               <div className="hero-buttons">
                 <a href="tel:+390383123456" className="btn btn-phone">📞 Chiama Ora</a>
@@ -539,7 +511,7 @@ export default function Home() {
         </section>
 
         {/* VINI */}
-        <section className="section wine-section" id="vini">
+        <section className="section section-dark" id="vini">
           <div className="container">
             <div className="section-header">
               <span className="eyebrow">La Cantina</span>
@@ -642,4 +614,41 @@ export default function Home() {
             <p className="footer-text">Via Parea, 3 · Stradella (PV) · 0383 123456</p>
             <div className="footer-links">
               <a href="tel:+390383123456">Chiama</a>
-              <a href="https://www.google.com/maps?q=Via
+              <a href="https://www.google.com/maps?q=Via+Parea+3+Stradella" target="_blank" rel="noopener noreferrer">Mappa</a>
+              <a href="mailto:info@ilgallo.it">Email</a>
+            </div>
+            <p className="footer-copy">© 2026 Il Gallo · Osteria di Charme</p>
+          </div>
+        </footer>
+
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            if (hamburger && navLinks) {
+              hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+              });
+              document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                  navLinks.classList.remove('open');
+                });
+              });
+            }
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                  e.preventDefault();
+                  const offset = 80;
+                  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              });
+            });
+          `
+        }} />
+      </body>
+    </html>
+  );
+}
