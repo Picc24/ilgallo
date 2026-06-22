@@ -14,7 +14,6 @@ export default function Home() {
             line-height: 1.6;
           }
 
-          /* LAYOUT */
           .site {
             display: grid;
             grid-template-columns: 200px 1fr;
@@ -23,7 +22,7 @@ export default function Home() {
 
           /* SIDEBAR */
           .sidebar {
-            background: #2e2b26;
+            background: #1a1a1a;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
@@ -64,14 +63,13 @@ export default function Home() {
             letter-spacing: 1px;
           }
 
-          /* MAIN */
           .main {
             padding: 60px 80px 60px 60px;
             overflow-y: auto;
             max-height: 100vh;
           }
 
-          /* HERO - sfondo animato */
+          /* HERO CON SFONDO ANIMATO E FOTO REALE */
           .hero {
             margin-bottom: 80px;
             padding: 60px 50px;
@@ -82,6 +80,7 @@ export default function Home() {
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, #1a1a1a 0%, #2e2b26 100%);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
           }
           .hero::before {
             content: '';
@@ -103,10 +102,10 @@ export default function Home() {
             right: 0;
             width: 50%;
             height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop&crop=center');
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.3;
             border-radius: 0 16px 16px 0;
           }
           .hero-content {
@@ -197,7 +196,7 @@ export default function Home() {
             color: #b0804a;
           }
 
-          /* ABOUT */
+          /* ABOUT CON FOTO REALE */
           .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -207,7 +206,7 @@ export default function Home() {
           .about-grid .img {
             height: 280px;
             border-radius: 16px;
-            background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=center');
             background-size: cover;
             background-position: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.06);
@@ -227,7 +226,7 @@ export default function Home() {
             padding-left: 16px;
           }
 
-          /* VINI - CON IMMAGINI VERE */
+          /* VINI CON FOTO REALI DI VINI */
           .wine-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -247,9 +246,9 @@ export default function Home() {
             background-size: cover;
             background-position: center;
           }
-          .wine-card .img-wine.r1 { background-image: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&h=400&fit=crop'); }
-          .wine-card .img-wine.b1 { background-image: url('https://images.unsplash.com/photo-1568214379698-8a5876f9e8d2?w=600&h=400&fit=crop'); }
-          .wine-card .img-wine.s1 { background-image: url('https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=600&h=400&fit=crop'); }
+          .wine-card .img-wine.r1 { background-image: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&h=400&fit=crop&crop=center'); }
+          .wine-card .img-wine.b1 { background-image: url('https://images.unsplash.com/photo-1568214379698-8a5876f9e8d2?w=600&h=400&fit=crop&crop=center'); }
+          .wine-card .img-wine.s1 { background-image: url('https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=600&h=400&fit=crop&crop=center'); }
           .wine-card .info {
             padding: 16px 20px 20px;
           }
@@ -336,7 +335,7 @@ export default function Home() {
             margin-top: 8px;
           }
 
-          /* CONTATTI */
+          /* CONTATTI CON FOTO REALE */
           .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -345,7 +344,7 @@ export default function Home() {
           .contact-grid .map {
             height: 280px;
             border-radius: 16px;
-            background-image: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&h=400&fit=crop');
+            background-image: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&h=400&fit=crop&crop=center');
             background-size: cover;
             background-position: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.06);
