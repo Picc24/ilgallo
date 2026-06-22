@@ -2,28 +2,29 @@ export default function Home() {
   return (
     <html lang="it">
       <head>
-        <title>Il Gallo - Osteria a Stradella (PV)</title>
+        <title>Il Gallo - Osteria a Stradella</title>
         <meta name="description" content="Osteria Il Gallo a Stradella. Cucina italiana, carne alla brace, pasta fresca e cantina selezionata." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet" />
         <style>{`
           * { margin: 0; padding: 0; box-sizing: border-box; }
+
           body {
             font-family: 'Nunito Sans', sans-serif;
-            background: #F8F5F0;
+            background: #EDE8E0;
             color: #2C2420;
             line-height: 1.7;
           }
           .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-          /* NAVBAR - più elegante */
+          /* NAVBAR */
           .navbar {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 14px 0;
-            background: rgba(248,245,240,0.92);
+            background: rgba(237,232,224,0.92);
             backdrop-filter: blur(14px);
-            border-bottom: 1px solid #E8DFD6;
+            border-bottom: 1px solid #D5CEC4;
           }
           .navbar .container {
             display: flex; align-items: center; justify-content: space-between;
@@ -35,11 +36,11 @@ export default function Home() {
             color: #2C2420;
             text-decoration: none;
           }
-          .logo-icon { font-size: 1.8rem; color: #B8860B; }
+          .logo-icon { font-size: 1.8rem; color: #8B7355; }
           .logo span {
             display: block; font-size: 0.6rem; font-weight: 400;
             letter-spacing: 0.15em; text-transform: uppercase;
-            color: #B8860B; font-family: 'Nunito Sans', sans-serif;
+            color: #8B7355; font-family: 'Nunito Sans', sans-serif;
             margin-top: -4px;
           }
           .nav-links {
@@ -74,30 +75,34 @@ export default function Home() {
             text-decoration: none;
           }
           .btn-primary {
-            background: #B8860B; color: #FFFFFF;
+            background: #8B7355;
+            color: #FFFFFF;
           }
           .btn-primary:hover {
-            background: #D4A017; transform: translateY(-2px);
+            background: #A0896B;
+            transform: translateY(-2px);
           }
           .btn-outline {
             background: transparent; color: #2C2420;
-            border: 2px solid #B8860B;
+            border: 2px solid #8B7355;
           }
           .btn-outline:hover {
-            background: #B8860B; color: #FFFFFF; transform: translateY(-2px);
+            background: #8B7355; color: #FFFFFF; transform: translateY(-2px);
           }
           .btn-phone {
-            background: #2C2420; color: #FFFFFF;
+            background: #6B2D2D;
+            color: #FFFFFF;
           }
           .btn-phone:hover {
-            background: #4A3C35; transform: translateY(-2px);
+            background: #8A3A3A;
+            transform: translateY(-2px);
           }
 
-          /* HERO - stile diverso */
+          /* HERO */
           .hero {
             min-height: 100vh; display: flex; align-items: center;
             padding: 120px 0 80px;
-            background: linear-gradient(135deg, #F8F5F0 0%, #E8DFD6 100%);
+            background: linear-gradient(135deg, #EDE8E0 0%, #DED6CC 100%);
           }
           .hero .container {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
@@ -106,18 +111,18 @@ export default function Home() {
           .eyebrow {
             display: inline-block; font-family: 'Nunito Sans', sans-serif;
             font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
-            text-transform: uppercase; color: #B8860B; margin-bottom: 0.5rem;
+            text-transform: uppercase; color: #8B7355; margin-bottom: 0.5rem;
           }
           .eyebrow::before {
             content: ''; display: inline-block; width: 28px; height: 2px;
-            background: #B8860B; margin-right: 12px; vertical-align: middle;
+            background: #8B7355; margin-right: 12px; vertical-align: middle;
           }
           .hero-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: clamp(3.5rem, 8vw, 5.5rem); font-weight: 700;
             line-height: 1; color: #2C2420; margin-bottom: 0.5rem;
           }
-          .hero-title em { font-style: italic; color: #B8860B; }
+          .hero-title em { font-style: italic; color: #8B7355; }
           .hero-subtitle {
             font-size: 1.3rem; font-weight: 400; color: #2C2420;
             opacity: 0.7; margin-bottom: 1.5rem;
@@ -129,12 +134,25 @@ export default function Home() {
           }
           .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
           .hero-image {
-            background: #E8DFD6; border-radius: 4px; height: 460px;
+            background: #D5CEC4; border-radius: 4px; height: 460px;
             display: flex; align-items: center; justify-content: center;
             color: #2C2420; opacity: 0.4; font-size: 1.2rem;
           }
 
-          /* ABOUT - stile diverso */
+          /* ABOUT */
+          .section { padding: 80px 0; }
+          .section-alt { background: #FFFFFF; }
+          .section-header { text-align: center; margin-bottom: 3rem; }
+          .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 700; margin-bottom: 1rem;
+          }
+          .section-sub {
+            font-size: 1.1rem; color: #2C2420; opacity: 0.7;
+            max-width: 560px; line-height: 1.8; margin: 0 auto;
+          }
+
           .about-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
           }
@@ -147,74 +165,71 @@ export default function Home() {
           .about-stats .stat { text-align: center; }
           .about-stats .number {
             display: block; font-family: 'Cormorant Garamond', serif;
-            font-size: 2.4rem; font-weight: 700; color: #B8860B;
+            font-size: 2.4rem; font-weight: 700; color: #8B7355;
           }
           .about-stats .label { font-size: 0.85rem; opacity: 0.6; }
           .about-image {
-            background: #E8DFD6; border-radius: 4px; height: 400px;
+            background: #D5CEC4; border-radius: 4px; height: 400px;
             display: flex; align-items: center; justify-content: center;
             color: #2C2420; opacity: 0.4; font-size: 1.2rem;
           }
 
-          /* MENU - griglia 2 colonne, stile diverso */
+          /* MENU */
           .menu-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;
           }
           .menu-card {
-            background: #FFFFFF; border-radius: 4px; padding: 32px 28px;
-            border-left: 4px solid #B8860B;
+            background: #FFFFFF; padding: 32px 28px;
+            border-left: 4px solid #8B7355;
           }
           .menu-card .icon { font-size: 2.6rem; margin-bottom: 0.5rem; display: block; }
           .menu-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem;
-            border-bottom: 1px solid #E8DFD6; padding-bottom: 0.5rem;
+            border-bottom: 1px solid #D5CEC4; padding-bottom: 0.5rem;
           }
           .menu-item {
             display: flex; justify-content: space-between; align-items: baseline;
-            padding: 10px 0; border-bottom: 1px solid #F0EBE6; gap: 12px;
+            padding: 10px 0; border-bottom: 1px solid #EDE8E0; gap: 12px;
           }
           .menu-item:last-child { border-bottom: none; }
           .menu-item .name { font-weight: 500; font-size: 0.98rem; }
           .menu-item .name .desc {
             display: block; font-weight: 300; font-size: 0.8rem; opacity: 0.65; margin-top: 2px;
           }
-          .menu-item .price { font-weight: 600; color: #B8860B; white-space: nowrap; font-size: 0.95rem; }
+          .menu-item .price { font-weight: 600; color: #8B7355; white-space: nowrap; font-size: 0.95rem; }
           .menu-cta { text-align: center; margin-top: 3rem; }
 
-          /* WINE - sezione vini in stile diverso */
+          /* WINE */
           .wine-section {
             background: #2C2420;
-            color: #F8F5F0;
+            color: #EDE8E0;
           }
-          .wine-section .section-title { color: #F8F5F0; }
-          .wine-section .section-sub { color: #D4C8BC; }
-          .wine-section .eyebrow { color: #B8860B; }
-          .wine-section .eyebrow::before { background: #B8860B; }
+          .wine-section .section-title { color: #EDE8E0; }
+          .wine-section .section-sub { color: #B5A89A; }
+          .wine-section .eyebrow { color: #8B7355; }
+          .wine-section .eyebrow::before { background: #8B7355; }
           .wine-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 40px;
           }
           .wine-card {
-            background: #3D322C; padding: 28px; border-radius: 4px;
-            border-bottom: 3px solid #B8860B;
+            background: #3D322C; padding: 28px; border-bottom: 3px solid #8B7355;
           }
           .wine-card h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem; color: #B8860B; margin-bottom: 0.5rem;
+            font-size: 1.2rem; color: #8B7355; margin-bottom: 0.5rem;
           }
-          .wine-card p {
-            font-size: 0.9rem; opacity: 0.7;
-          }
+          .wine-card p { font-size: 0.9rem; opacity: 0.7; }
 
-          /* REVIEWS - stile diverso */
+          /* REVIEWS */
           .reviews-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;
           }
           .review-card {
-            background: #FFFFFF; border-radius: 4px; padding: 28px 26px;
-            border-bottom: 3px solid #B8860B;
+            background: #FFFFFF; padding: 28px 26px;
+            border-bottom: 3px solid #8B7355;
           }
-          .review-card .stars { color: #B8860B; font-size: 1.1rem; margin-bottom: 0.5rem; }
+          .review-card .stars { color: #8B7355; font-size: 1.1rem; margin-bottom: 0.5rem; }
           .review-card .text {
             font-style: italic; font-size: 0.95rem; line-height: 1.7;
             margin-bottom: 1rem; opacity: 0.85;
@@ -222,7 +237,7 @@ export default function Home() {
           .review-card .author { font-weight: 600; font-size: 0.9rem; }
           .review-card .date { font-weight: 300; opacity: 0.5; font-size: 0.8rem; margin-left: 6px; }
 
-          /* CONTACT - stile diverso */
+          /* CONTACT */
           .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 40px;
           }
@@ -233,17 +248,17 @@ export default function Home() {
           .contact-card p, .contact-card a {
             font-size: 1rem; opacity: 0.8; line-height: 1.8; display: block;
           }
-          .contact-card a { color: #B8860B; font-weight: 500; text-decoration: none; }
+          .contact-card a { color: #8B7355; font-weight: 500; text-decoration: none; }
           .contact-card a:hover { text-decoration: underline; }
           .contact-hours { display: flex; flex-direction: column; gap: 4px; }
           .contact-hours .day {
             display: flex; justify-content: space-between; font-size: 0.95rem;
-            padding: 6px 0; border-bottom: 1px solid #E8DFD6;
+            padding: 6px 0; border-bottom: 1px solid #D5CEC4;
           }
           .contact-hours .day span:last-child { opacity: 0.7; }
           .contact-cta-box {
             margin-top: 50px; padding: 48px 40px;
-            background: #2C2420; border-radius: 4px; text-align: center;
+            background: #2C2420; text-align: center;
             color: #FFFFFF;
           }
           .contact-cta-box h3 {
@@ -254,7 +269,7 @@ export default function Home() {
 
           /* FOOTER */
           .footer {
-            border-top: 1px solid #E8DFD6; background: #FFFFFF;
+            border-top: 1px solid #D5CEC4; background: #FFFFFF;
             padding: 40px 0 30px; text-align: center;
           }
           .footer-logo {
@@ -271,25 +286,10 @@ export default function Home() {
             display: flex; justify-content: center; gap: 2.5rem;
             margin: 1.5rem 0; flex-wrap: wrap;
           }
-          .footer-links a { font-size: 0.9rem; color: #B8860B; font-weight: 500; text-decoration: none; }
+          .footer-links a { font-size: 0.9rem; color: #8B7355; font-weight: 500; text-decoration: none; }
           .footer-links a:hover { text-decoration: underline; }
           .footer-copy { font-size: 0.75rem; opacity: 0.3; margin-top: 0.5rem; }
 
-          /* SECTIONS */
-          .section { padding: 80px 0; }
-          .section-alt { background: #FFFFFF; }
-          .section-header { text-align: center; margin-bottom: 3rem; }
-          .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-            font-weight: 700; margin-bottom: 1rem;
-          }
-          .section-sub {
-            font-size: 1.1rem; color: #2C2420; opacity: 0.7;
-            max-width: 560px; line-height: 1.8; margin: 0 auto;
-          }
-
-          /* RESPONSIVE */
           @media (max-width: 1024px) {
             .hero .container { grid-template-columns: 1fr; gap: 40px; }
             .hero-image { height: 320px; order: -1; }
@@ -309,7 +309,7 @@ export default function Home() {
               display: none; flex-direction: column; gap: 16px;
               position: absolute; top: 72px; left: 0; right: 0;
               background: #FFFFFF; padding: 24px;
-              border-bottom: 1px solid #E8DFD6;
+              border-bottom: 1px solid #D5CEC4;
             }
             .nav-links.open { display: flex; }
             .hamburger { display: flex; }
