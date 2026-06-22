@@ -2,15 +2,15 @@ export default function Home() {
   return (
     <html lang="it">
       <head>
-        <title>Il Gallo - Osteria a Stradella</title>
+        <title>Il Gallo · Osteria a Stradella</title>
         <meta name="description" content="Osteria Il Gallo a Stradella. Cucina italiana, carne alla brace." />
         <style>{`
           * { margin: 0; padding: 0; box-sizing: border-box; }
 
           body {
-            font-family: 'Georgia', serif;
-            background: #1a1a1a;
-            color: #e0d6c8;
+            font-family: 'Times New Roman', serif;
+            background: #f5f0eb;
+            color: #2c241e;
             line-height: 1.6;
           }
           .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -18,32 +18,32 @@ export default function Home() {
           /* NAV */
           nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            padding: 20px 0;
-            background: #1a1a1a;
-            border-bottom: 1px solid #333;
+            padding: 16px 0;
+            background: #f5f0eb;
+            border-bottom: 1px solid #d5ccc4;
           }
           nav .container {
             display: flex; justify-content: space-between; align-items: center;
           }
           nav h1 {
-            font-size: 1.5rem; font-weight: 400;
-            letter-spacing: 4px; text-transform: uppercase;
+            font-size: 1.8rem; font-weight: 400;
+            letter-spacing: 4px;
           }
-          nav h1 span { color: #b8956a; }
+          nav h1 span { color: #a67c52; }
           nav a {
-            color: #e0d6c8; text-decoration: none;
+            color: #2c241e; text-decoration: none;
             margin-left: 30px; font-size: 0.8rem;
-            letter-spacing: 2px; text-transform: uppercase;
+            letter-spacing: 2px;
             opacity: 0.6;
           }
           nav a:hover { opacity: 1; }
 
-          /* HERO */
+          /* HERO - diverso, senza immagine fissa */
           .hero {
             min-height: 100vh;
             display: flex; align-items: center;
             padding: 120px 0 60px;
-            background: #1a1a1a;
+            background: #f5f0eb;
           }
           .hero .container {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
@@ -51,119 +51,133 @@ export default function Home() {
           .hero h2 {
             font-size: 4.5rem; font-weight: 400;
             line-height: 1.1; letter-spacing: 2px;
+            color: #2c241e;
           }
-          .hero h2 em { font-style: italic; color: #b8956a; }
+          .hero h2 em { font-style: italic; color: #a67c52; }
           .hero p {
-            font-size: 1.1rem; opacity: 0.6;
+            font-size: 1.1rem; color: #2c241e; opacity: 0.6;
             margin: 20px 0 30px; max-width: 440px;
           }
           .hero .btn {
             display: inline-block; padding: 14px 40px;
-            background: #b8956a; color: #1a1a1a;
+            background: #2c241e; color: #f5f0eb;
             text-decoration: none; letter-spacing: 2px;
-            font-size: 0.8rem; text-transform: uppercase;
+            font-size: 0.8rem;
           }
           .hero .btn-outline {
-            background: transparent; color: #e0d6c8;
-            border: 1px solid #b8956a; margin-left: 12px;
+            background: transparent; color: #2c241e;
+            border: 1px solid #2c241e; margin-left: 12px;
           }
           .hero-image {
-            background: #333; height: 400px;
+            background: #d5ccc4; height: 400px;
             display: flex; align-items: center; justify-content: center;
-            opacity: 0.3; font-size: 0.9rem;
+            opacity: 0.4; font-size: 0.9rem;
           }
 
           /* SECTIONS */
           .section { padding: 80px 0; }
-          .section-dark { background: #141414; }
+          .section-light { background: #ffffff; }
           .section h3 {
-            font-size: 2.5rem; font-weight: 400;
+            font-size: 2.8rem; font-weight: 400;
             letter-spacing: 2px; margin-bottom: 10px;
           }
           .section .sub {
-            opacity: 0.4; max-width: 500px;
+            color: #2c241e; opacity: 0.4; max-width: 500px;
             margin-bottom: 40px;
           }
 
-          /* ABOUT */
+          /* ABOUT - diverso, senza numeri grandi */
           .about-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
             align-items: center;
           }
-          .about-grid p { opacity: 0.6; margin-bottom: 16px; }
-          .stats { display: flex; gap: 40px; margin-top: 30px; }
-          .stats div { text-align: center; }
-          .stats .num { font-size: 2.5rem; color: #b8956a; display: block; }
-          .stats .label { font-size: 0.7rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px; }
+          .about-grid p { color: #2c241e; opacity: 0.6; margin-bottom: 16px; }
+          .about-grid .signature {
+            font-style: italic; font-size: 1.2rem;
+            color: #a67c52; margin-top: 20px;
+          }
 
-          /* MENU */
+          /* MENU - diverso, con bordi e stile rustico */
           .menu-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-            background: #333;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
           }
           .menu-card {
-            background: #1a1a1a; padding: 36px 30px;
+            background: #f5f0eb; padding: 30px;
+            border: 1px solid #d5ccc4;
           }
           .menu-card h4 {
             font-size: 1.3rem; font-weight: 400;
-            color: #b8956a; margin-bottom: 16px;
+            color: #a67c52; margin-bottom: 16px;
+            letter-spacing: 2px;
           }
           .menu-item {
             display: flex; justify-content: space-between;
-            padding: 8px 0; border-bottom: 1px solid #222;
+            padding: 8px 0; border-bottom: 1px solid #e8e0d8;
           }
-          .menu-item .price { color: #b8956a; }
+          .menu-item .price { color: #a67c52; }
 
-          /* WINE */
+          /* WINE - diverso, con sfondo chiaro */
           .wine-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px;
           }
           .wine-card {
-            background: #1a1a1a; padding: 30px;
-            border-bottom: 2px solid #b8956a;
+            background: #f5f0eb; padding: 30px;
+            border: 1px solid #d5ccc4;
           }
-          .wine-card h5 { color: #b8956a; font-size: 1.1rem; }
-          .wine-card p { opacity: 0.5; font-size: 0.9rem; }
+          .wine-card h5 { color: #a67c52; font-size: 1.1rem; font-weight: 400; }
+          .wine-card p { color: #2c241e; opacity: 0.5; font-size: 0.9rem; }
 
-          /* REVIEWS */
+          /* REVIEWS - diverso, con virgolette */
           .reviews-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px;
           }
           .review-card {
-            padding: 24px 0; border-top: 1px solid #333;
+            padding: 24px 0;
           }
-          .review-card .stars { color: #b8956a; margin-bottom: 10px; }
-          .review-card .text { font-style: italic; opacity: 0.7; font-size: 0.9rem; }
-          .review-card .author { opacity: 0.4; font-size: 0.8rem; margin-top: 12px; }
+          .review-card .stars { color: #a67c52; margin-bottom: 10px; }
+          .review-card .text {
+            font-style: italic; color: #2c241e; opacity: 0.7;
+            font-size: 0.95rem;
+          }
+          .review-card .author {
+            color: #2c241e; opacity: 0.4; font-size: 0.8rem;
+            margin-top: 12px;
+          }
 
-          /* CONTACT */
+          /* CONTACT - diverso, con stile più semplice */
           .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
           }
           .contact-card h5 {
-            font-size: 0.9rem; color: #b8956a;
+            font-size: 0.9rem; color: #a67c52;
             letter-spacing: 1px; margin-bottom: 8px;
           }
-          .contact-card p { opacity: 0.5; }
-          .contact-card a { color: #b8956a; text-decoration: none; }
+          .contact-card p { color: #2c241e; opacity: 0.5; }
+          .contact-card a { color: #a67c52; text-decoration: none; }
           .hours .day {
             display: flex; justify-content: space-between;
-            padding: 4px 0; border-bottom: 1px solid #222;
-            font-size: 0.9rem; opacity: 0.6;
+            padding: 4px 0; border-bottom: 1px solid #e8e0d8;
+            font-size: 0.9rem; color: #2c241e; opacity: 0.6;
           }
           .cta-box {
             margin-top: 50px; padding: 50px;
-            background: #141414; text-align: center;
+            background: #2c241e; text-align: center;
+            color: #f5f0eb;
           }
-          .cta-box h3 { font-size: 2rem; font-weight: 400; margin-bottom: 10px; }
+          .cta-box h3 { font-size: 2rem; font-weight: 400; margin-bottom: 10px; color: #f5f0eb; }
           .cta-box p { opacity: 0.4; margin-bottom: 24px; }
+          .cta-box .btn {
+            background: #a67c52; color: #f5f0eb;
+            padding: 14px 40px; text-decoration: none;
+            letter-spacing: 2px; font-size: 0.8rem;
+          }
 
           /* FOOTER */
           footer {
-            border-top: 1px solid #333;
+            border-top: 1px solid #d5ccc4;
             padding: 40px 0; text-align: center;
           }
-          footer p { opacity: 0.3; font-size: 0.8rem; }
+          footer p { color: #2c241e; opacity: 0.3; font-size: 0.8rem; }
 
           @media (max-width: 768px) {
             .hero .container { grid-template-columns: 1fr; }
@@ -195,7 +209,7 @@ export default function Home() {
         <section className="hero">
           <div className="container">
             <div>
-              <span style={{ color: '#b8956a', letterSpacing: '3px', fontSize: '0.8rem', textTransform: 'uppercase' }}>Dal 2014</span>
+              <span style={{ color: '#a67c52', letterSpacing: '3px', fontSize: '0.8rem' }}>Dal 2014</span>
               <h2>Il <em>Gallo</em></h2>
               <p>Osteria · Cucina italiana · Carne alla brace</p>
               <a href="tel:+390383123456" className="btn">Chiama Ora</a>
@@ -206,21 +220,17 @@ export default function Home() {
         </section>
 
         {/* ABOUT */}
-        <section className="section section-dark">
+        <section className="section section-light">
           <div className="container">
             <div className="about-grid">
               <div>
-                <span style={{ color: '#b8956a', letterSpacing: '2px', fontSize: '0.7rem', textTransform: 'uppercase' }}>Chi Siamo</span>
+                <span style={{ color: '#a67c52', letterSpacing: '2px', fontSize: '0.7rem' }}>Chi Siamo</span>
                 <h3 style={{ marginTop: '8px' }}>La nostra storia</h3>
                 <p>L'Osteria Il Gallo è nata nel 2014 dalla passione per la cucina italiana e l'ospitalità.</p>
                 <p>Ogni piatto racconta una storia di famiglia e tradizione.</p>
-                <div className="stats">
-                  <div><span className="num">4.5</span><span className="label">Recensioni</span></div>
-                  <div><span className="num">268</span><span className="label">Clienti</span></div>
-                  <div><span className="num">12</span><span className="label">Anni</span></div>
-                </div>
+                <div className="signature">— Da sempre a Stradella</div>
               </div>
-              <div style={{ background: '#333', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.3 }}>Foto</div>
+              <div style={{ background: '#d5ccc4', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.3 }}>Foto</div>
             </div>
           </div>
         </section>
@@ -259,7 +269,7 @@ export default function Home() {
         </section>
 
         {/* VINI */}
-        <section className="section section-dark" id="vini">
+        <section className="section section-light" id="vini">
           <div className="container">
             <h3>La cantina</h3>
             <p className="sub">Una selezione di etichette locali e nazionali.</p>
@@ -272,7 +282,7 @@ export default function Home() {
         </section>
 
         {/* REVIEWS */}
-        <section className="section">
+        <section className="section" id="recensioni">
           <div className="container">
             <h3>Recensioni</h3>
             <p className="sub">Cosa dicono di noi.</p>
@@ -297,7 +307,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section className="section section-dark" id="contatti">
+        <section className="section section-light" id="contatti">
           <div className="container">
             <h3>Dove siamo</h3>
             <p className="sub">Vieni a trovarci a Stradella.</p>
